@@ -27,5 +27,4 @@ func Test_GetHealthCheckShouldReturnValidJSON(context *testing.T) {
 		},
 	}
 	Run(context, theTest)
-	context.Fail()
 }
