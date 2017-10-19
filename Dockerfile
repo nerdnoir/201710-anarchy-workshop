@@ -1,7 +1,7 @@
 FROM golang:alpine
 
 COPY ./src/ /go/src/
-COPY ./build.sh /go/
+COPY ./ci/scripts/build.sh /go/
 COPY ./docker-entrypoint.sh /
 
 RUN apk add --update bash && apk add --update curl && apk add --update git &&\
