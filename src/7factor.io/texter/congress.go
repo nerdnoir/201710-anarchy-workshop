@@ -88,7 +88,7 @@ func (db *CongressDB) GetRepresentatives() (Representatives, error) {
 }
 
 // Close satisfies the CongressDB interface. Closes the DB connection. This should only be
-// called when the application resolves.
+// called when the application resolves. Booyah.
 func (db *CongressDB) Close() {
 	db.Session.Close()
 }
