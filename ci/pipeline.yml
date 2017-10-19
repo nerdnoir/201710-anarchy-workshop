@@ -4,10 +4,6 @@ resources:
   source: 
     uri: https://github.com/jduv/201710-anarchy-workshop.git
     branch: master
-- name: release
-  type: docker-image
-  source:
-    repository: 964357038409.dkr.ecr.us-east-1.amazonaws.com/7fprod
 
 jobs:
 - name: build
@@ -23,10 +19,3 @@ jobs:
     trigger: true
   - task: test
     file: texter/ci/tasks/test.yml
-
-- name: release
-  plan:
-  - get: texter
-    trigger: true
-  - put: release
-    params: { build: texter }
